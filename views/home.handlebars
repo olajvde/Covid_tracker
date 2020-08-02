@@ -1,0 +1,72 @@
+<style>
+
+	body{
+    background-color: #002B36;
+    color: #839496;
+    font-weight: 700;
+}
+	</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/style.css">
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="/">
+    <img src="/img/coronavirus.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    Covid Tracker
+  </a>
+</nav>
+<br>
+
+<h1 style="text-align: center;">COVID-19 Tracker for West African Countries :</h1>
+<style>
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<br>
+ {{#each info  }}
+
+
+<div class="card" style="width: 18rem; margin:0 auto; float:none; "   >
+  <img src="{{countryInfo.flag}}" class="card-img-top" alt="Country flag">
+  <div class="card-body">
+    <h2 class="card-title">{{country}}</h2>
+    <p class="card-text"><font class="text-warning">Total cases: {{cases}}</font></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><font class="text-info">Population: {{population}}</font> <img src="/img/population.png" width="30" height="30" class="d-inline-block align-top" alt="" style="float:right;" loading="lazy">
+</li>
+    <li class="list-group-item"><font class="text-warning">Cases Today: {{todayCases}}</font> <img src="/img/social.png" width="30" height="30" class="d-inline-block align-top" alt="" style="float:right;" loading="lazy">
+</li>
+    <li class="list-group-item"><font class="text-danger">Critical Cases: {{critical}}</font> <img src="/img/fever.png" width="30" height="30" class="d-inline-block align-top" alt="" style="float:right;" loading="lazy">
+</li>
+    <li class="list-group-item"><font class="text-danger">Total Deaths: {{deaths}}</font> <img src="/img/death.png" width="30" height="30" class="d-inline-block align-top" alt="" style="float:right;" loading="lazy">
+</li>
+    <li class="list-group-item"><font class="text-success">Total Recoveries: {{recovered}}</font> <img src="/img/no.png" width="30" height="30" class="d-inline-block align-top" alt="" style="float:right;" loading="lazy">
+</li>
+  </ul>
+  
+</div><br>
+
+    
+    {{/each}}
+
+{{!-- "Clean your hands often. Use soap and water ",
+    "Wear a Mask!",
+    " Stay at home if you feel unwell",
+    "Don't touch your eyes, nose or mouth", --}}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Source: <a href="https://www.disease.sh">disease.sh</a> </h1>
+     <hr class="my-4">
+     <p class="lead"><h4>Tips to stay safe</h4></p>
+    <p class="lead">Clean your hands often. Use soap and water</p>
+    <p class="lead">Stay at home if you feel unwell</p>
+    <p class="lead">Don't touch your eyes, nose or mouth</p>
+
+</div>
+</div>

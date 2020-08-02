@@ -1,0 +1,16 @@
+{
+  "name": "trial",
+  "version": "1.0.0",
+  "description": "This app basically gets details about the war against Covid-19 in west African Countries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "olajvde",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express3-handlebars": "^0.5.2",
+    "novelcovid": "^3.0.0"
+  }
+}
